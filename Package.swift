@@ -3,15 +3,15 @@
 
 import PackageDescription
 
-let packageVersion = "0.0.1"
+let packageVersion = "0.0.2"
 
 let package = Package(
-    name: "Common",
+    name: "Shared",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "Common",
-            targets: ["Common"]),
+            name: "Shared",
+            targets: ["Shared"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -21,9 +21,9 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
-            name: "Common",
+            name: "Shared",
             url: "https://github.com/jorge-orjuela-kenility/Shared-Package/releases/download/\(packageVersion)/shared.xcframework.zip",
             checksum: "5028e25b25b24e6f35fbe4484dfc438a31345a9d5bf5666640e99849cfb497cb"
-        ),
+        )
     ]
 )
